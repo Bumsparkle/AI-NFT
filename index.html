@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create NFT</title>
+</head>
+<body>
+  <form id="create-nft-form">
+    <label for="text">Text:</label>
+    <input type="text" id="text" name="text">
+    <button type="submit">Create NFT</button>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#create-nft-form').submit(async function(event) {
+      event.preventDefault();
+
+      const nftText = $('#text').val();
+
+      const response = await fetch('/generate-nft', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text: nftText })
+      });
+
+      const responseData = await response.json();
+      if (responseData.success) {
+        alert(`NFT created with ID: ${responseData.nftId}`);
+      } else {
+        alert('Failed to create NFT');
+      }
+    });
+  </script>
+</body>
+</html>
