@@ -29,3 +29,23 @@ const createNFT = async (nftData) => {
   // Return the ID of the created NFT
   return nftId;
 };
+
+$(document).ready(function() {
+  $('#create-nft-form').submit(async function(event) {
+    event.preventDefault();
+
+    const nftData = {
+      tokenURI: 'https://dalle.ai/api/generate',
+      name: 'My NFT',
+      description: 'This is my first NFT',
+      image: 'https://dalle.ai/api/generate'
+    };
+
+    try {
+      const nftId = await createNFT(nftData);
+      alert(`NFT created with ID: ${nftId}`);
+    } catch (error) {
+      alert(`Failed to create NFT: ${error.message}`);
+    }
+  });
+});
