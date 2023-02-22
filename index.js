@@ -95,6 +95,7 @@ app.post('/generate-nft', async (req, res) => {
 // Define a route for the root URL
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/client.js');
   });
 
 const PORT = process.env.PORT || 3000;
