@@ -72,7 +72,7 @@ app.post('/generate-nft', async (req, res) => {
       response_format: 'url',
     }, {
       headers: {
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer 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`,
       },
     });
 
