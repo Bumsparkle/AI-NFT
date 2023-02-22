@@ -1,4 +1,3 @@
-const { ethers } = require('ethers');
 
 // Define a function to create an NFT
 const createNFT = async (nftData) => {
