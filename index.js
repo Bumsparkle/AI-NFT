@@ -4,7 +4,7 @@ const axios = require('axios');
 const { ethers } = require('ethers');
 const { createAlchemyWeb3 } = require('@alch/alchemy-web3');
 
-const OPEN_AI_KEY = "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"
+const OPEN_AI_KEY = "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"
 
 const app = express();
 app.use(bodyParser.json());
