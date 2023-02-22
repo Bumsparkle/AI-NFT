@@ -16,6 +16,7 @@ const alchemyWeb3 = createAlchemyWeb3('https://eth-goerli.g.alchemy.com/v2/9KJKv
 
 // Load your contract ABI
 const contractABI = require('./contract-abi.json');
+console.log(contractABI);
 
 // Replace this with your contract address
 const contractAddress = '0xD06a9Feb63081Ec37F1fA188d9B3D9737dC63716';
