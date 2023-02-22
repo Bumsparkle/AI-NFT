@@ -1,3 +1,10 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const axios = require('axios');
+//const ethers = require('ethers');
+const { ethers } = require('ethers');
+const { createAlchemyWeb3 } = require('@alch/alchemy-web3');
+
 // Define a function to create an NFT
 const createNFT = async (nftData) => {
   // Prompt the user to connect their wallet
